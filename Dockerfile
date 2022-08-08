@@ -19,11 +19,9 @@ LABEL org.opencontainers.image.version="$VERSION"
 
 USER root
 
-COPY docs/ansic-library.html /opt/static/docs/index.html
-
 COPY database.sqlite /opt/wiki/database.sqlite
 
-RUN apt-get update -y && apt-get install -y --no-install-recommends mariadb-server
+RUN apt-get update -y && apt-get install -y mariadb-server
 
 # install jupyter dependancies
 RUN pip3 install mariadb_kernel
