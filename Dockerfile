@@ -14,28 +14,15 @@ LABEL org.opencontainers.image.description="This image is the mariadb specific i
 ARG VERSION=v1.0.0
 LABEL org.opencontainers.image.version="$VERSION"
 
-# setup the man pages
-# RUN yes | unminimize
-
 USER root
-
-COPY database.sqlite /opt/wiki/database.sqlite
 
 RUN apt-get update -y && apt-get install -y mariadb-server
 
 # install jupyter dependancies
 RUN pip3 install mariadb_kernel
 
-
 # Install jupyter kernels
 RUN python3 -m mariadb_kernel.install
-
-# copy all the builtin jupyter notebooks
-COPY builtinNotebooks /builtin/jupyter
-RUN chown -R ${UID}:${UID} /builtin /opt/static /opt/wiki
-
-COPY motd.txt /scripts/
-RUN chown -R ${UID}:${UID} /scripts
 
 USER ${UNAME}
 
