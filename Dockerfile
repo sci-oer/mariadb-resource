@@ -14,6 +14,8 @@ LABEL org.opencontainers.image.description="This image is the mariadb specific i
 ARG VERSION=v1.0.0
 LABEL org.opencontainers.image.version="$VERSION"
 
+COPY scripts/* /scripts/
+
 USER root
 
 RUN apt-get update -y && apt-get install -y mariadb-server
