@@ -1,5 +1,5 @@
 
-FROM marshallasch/base-resource:latest
+FROM marshallasch/base-resource:sha-6ae2b4c
 
 LABEL org.opencontainers.version="v1.0.0"
 
