@@ -1,5 +1,5 @@
 
-FROM marshallasch/base-resource:sha-6ae2b4c
+FROM scioer/base-resource:sha-40bb95e
 
 LABEL org.opencontainers.version="v1.0.0"
 
