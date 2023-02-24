@@ -1,7 +1,7 @@
 [![Deployment](https://github.com/sci-oer/mariadb-resource/actions/workflows/deployment.yml/badge.svg)](https://github.com/sci-oer/mariadb-resource/actions/workflows/deployment.yml)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/scioer/mariadb-resource?style=plastic)
 ![Docker Pulls](https://img.shields.io/docker/pulls/scioer/mariadb-resource?style=plastic)
-
+![GitHub](https://img.shields.io/github/license/sci-oer/mariadb-resource?style=plastic)
 
 This is the mariadb specific version of the sci-oer resource.
 This extends the configuration defined in the [sci-oer/base-resource](https://github.com/sci-oer/base-resource) and adds the language specific dependencies.
